@@ -9,13 +9,19 @@ const projects = [
     year: "2026", bg: "#04342C", fg: "#5DCAA5", accent: "#1D9E75",
   },
   {
-    slug: "healthcare-ai", index: "02", title: "Healthcare AI Routing", subtitle: "AI-Powered Hospital Recommendation",
+    slug: "bagtrunkz", index: "02", title: "Bagtrunkz", subtitle: "Fashion E-commerce Platform",
+    tags: ["E-commerce UX", "Visual Design", "Conversion"],
+    desc: "End-to-end shopping experience for a bag brand — product discovery, cart flow, and checkout designed for conversion.",
+    year: "2026", bg: "#1C1009", fg: "#E8C89A", accent: "#C4823E",
+  },
+  {
+    slug: "healthcare-ai", index: "03", title: "Healthcare AI Routing", subtitle: "AI-Powered Hospital Recommendation",
     tags: ["AI UX", "User Flows", "Accessibility"],
     desc: "Translated ML complexity into a clear, accessible interface for users with low digital literacy.",
     year: "2026", bg: "#042C53", fg: "#85B7EB", accent: "#378ADD",
   },
   {
-    slug: "culturelink", index: "03", title: "CultureLink Kenya", subtitle: "Cultural Discovery Experience",
+    slug: "culturelink", index: "04", title: "CultureLink Kenya", subtitle: "Cultural Discovery Experience",
     tags: ["Discovery UX", "Onboarding", "Localisation"],
     desc: "Personalised discovery across six cultural groups — onboarding, language modules, content navigation.",
     year: "2025–ongoing", bg: "#26215C", fg: "#AFA9EC", accent: "#7F77DD",
@@ -74,7 +80,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div style={{ borderBottom: "1px solid var(--border)", padding: "0.75rem 0", overflow: "hidden", background: "var(--ink)" }}>
+      <div style={{ borderBottom: "1px solid var(--border)", padding: "0.75rem 0", overflow: "hidden", background: "#151513" }}>
         <div className="marquee-track" style={{ display: "flex", gap: "2.5rem", width: "max-content" }}>
           {[...skills, ...skills].map((s, i) => (
             <span key={i} style={{ fontFamily: "var(--mono)", fontSize: "12px", color: "rgba(245,242,236,0.5)", whiteSpace: "nowrap", letterSpacing: "0.05em" }}>
@@ -87,7 +93,7 @@ export default function Home() {
       <section id="work" style={{ padding: "4rem 2.5rem" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "2.5rem", borderBottom: "1px solid var(--border)", paddingBottom: "0.75rem" }}>
           <span style={{ fontFamily: "var(--mono)", fontSize: "11px", letterSpacing: "2px", color: "var(--ink-muted)", textTransform: "uppercase" }}>Selected work</span>
-          <span style={{ fontFamily: "var(--mono)", fontSize: "11px", color: "var(--ink-faint)" }}>3 case studies</span>
+          <span style={{ fontFamily: "var(--mono)", fontSize: "11px", color: "var(--ink-faint)" }}>4 case studies</span>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: "1.5px", border: "1px solid var(--border)", borderRadius: "12px", overflow: "hidden" }}>
           {projects.map(p => <ProjectCard key={p.slug} p={p} />)}
@@ -122,9 +128,9 @@ export default function Home() {
         </div>
       </section>
 
-      <footer style={{ borderTop: "1px solid var(--border)", padding: "3rem 2.5rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--ink)" }}>
+      <footer style={{ borderTop: "1px solid var(--border)", padding: "3rem 2.5rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "#080807" }}>
         <div>
-          <p style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 900, color: "var(--bg)", letterSpacing: "-1px" }}>Let's work together.</p>
+          <p style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 900, color: "var(--ink)", letterSpacing: "-1px" }}>Let's work together.</p>
           <p style={{ fontFamily: "var(--mono)", fontSize: "13px", color: "rgba(245,242,236,0.5)", marginTop: "4px" }}>jamie.khalayi@gmail.com</p>
         </div>
         <div style={{ display: "flex", gap: "1rem" }}>

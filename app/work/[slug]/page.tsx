@@ -41,7 +41,7 @@ const projects: Record<string, {
     ],
   },
   "healthcare-ai": {
-    index: "02", title: "Healthcare AI Routing", subtitle: "AI-Powered Hospital Recommendation",
+    index: "03", title: "Healthcare AI Routing", subtitle: "AI-Powered Hospital Recommendation",
     year: "2026", bg: "#042C53", fg: "#85B7EB", accent: "#378ADD",
     tags: ["AI UX", "User Flows", "Accessibility", "ML Systems"],
     role: "Designer & ML Engineer", duration: "2026", team: "Qare+",
@@ -65,8 +65,33 @@ const projects: Record<string, {
       "Progressive disclosure pattern adopted as a standard across the product.",
     ],
   },
+  bagtrunkz: {
+    index: "02", title: "Bagtrunkz", subtitle: "Fashion E-commerce Platform",
+    year: "2026", bg: "#1C1009", fg: "#E8C89A", accent: "#C4823E",
+    tags: ["E-commerce UX", "Visual Design", "Brand Design", "Conversion Optimisation"],
+    role: "Lead Designer & Developer", duration: "2026", team: "Independent",
+    problem: "Selling bags online is competitive — most small fashion brands lose customers to friction: unclear product imagery, confusing navigation, and checkout flows that abandon at the last step. Bagtrunkz needed a shopping experience that felt premium, moved fast, and converted.",
+    research: [
+      "Audited competitor bag brands — identified that most used cluttered layouts that buried the product and slowed decision-making.",
+      "Interviewed target customers about their online shopping habits — the most cited reason for abandoning carts was 'too many steps'.",
+      "Mapped the full purchase journey from landing page to order confirmation, marking every point of potential drop-off.",
+      "Identified that high-quality product photography paired with minimal UI produced the highest trust signal.",
+    ],
+    process: [
+      "Established a visual language — warm espresso tones, clean typography, and generous whitespace to position the brand as premium.",
+      "Designed the product browsing experience around filters and imagery first, keeping text secondary to the product.",
+      "Simplified checkout to three steps: cart review, delivery details, payment — removing all optional steps from the critical path.",
+      "Iterated on the product detail page after testing showed users wanted to see bag dimensions and interior shots before purchasing.",
+    ],
+    solution: "A clean, conversion-focused e-commerce platform built around the product. Large imagery, a frictionless three-step checkout, and a consistent brand identity across every touchpoint — from product grid to order confirmation.",
+    outcome: [
+      "End-to-end design and development of the storefront and checkout flow.",
+      "Three-step checkout reduced abandonment at the payment stage.",
+      "Visual identity system established and applied consistently across web and packaging.",
+    ],
+  },
   culturelink: {
-    index: "03", title: "CultureLink Kenya", subtitle: "Cultural Discovery Experience",
+    index: "04", title: "CultureLink Kenya", subtitle: "Cultural Discovery Experience",
     year: "2025–Ongoing", bg: "#26215C", fg: "#AFA9EC", accent: "#7F77DD",
     tags: ["Discovery UX", "Onboarding", "Localisation", "Content Design"],
     role: "Lead Designer & Developer", duration: "2025–Ongoing", team: "Independent",
@@ -219,7 +244,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
         </div>
 
         {/* Solution */}
-        <div style={{ marginBottom: "4rem", padding: "2rem", background: "rgba(14,14,13,0.04)", borderRadius: "12px", borderLeft: "3px solid var(--accent)" }}>
+        <div style={{ marginBottom: "4rem", padding: "2rem", background: "rgba(255,255,255,0.05)", borderRadius: "12px", borderLeft: "3px solid var(--accent)" }}>
           <p style={{ fontFamily: "var(--mono)", fontSize: "11px", letterSpacing: "2px", color: "var(--accent)", textTransform: "uppercase", marginBottom: "1rem" }}>04 — Solution</p>
           <p style={{ fontSize: "17px", lineHeight: 1.8, color: "var(--ink)" }}>{p.solution}</p>
         </div>

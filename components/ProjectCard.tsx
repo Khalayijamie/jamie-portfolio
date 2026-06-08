@@ -12,7 +12,7 @@ export function ProjectCard({ p }: { p: Project }) {
   return (
     <Link href={`/work/${p.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
       <div
-        style={{ display: "grid", gridTemplateColumns: "280px 1fr", background: hovered ? "rgba(14,14,13,0.03)" : "var(--bg)", transition: "background 0.2s ease" }}
+        style={{ display: "grid", gridTemplateColumns: "280px 1fr", background: hovered ? "rgba(255,255,255,0.04)" : "var(--bg)", transition: "background 0.2s ease" }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
