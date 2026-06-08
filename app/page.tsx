@@ -11,7 +11,7 @@ const projects = [
   {
     slug: "bagtrunkz", index: "02", title: "Bagtrunkz", subtitle: "Fashion E-commerce Platform",
     tags: ["E-commerce UX", "Visual Design", "Conversion"],
-    desc: "End-to-end shopping experience for a bag brand — product discovery, cart flow, and checkout designed for conversion.",
+    desc: "Full e-commerce platform for a Nairobi-born bag brand — product catalogue, brand story, and a content blog built to feel premium and local.",
     year: "2026", bg: "#1C1009", fg: "#E8C89A", accent: "#C4823E",
   },
   {
@@ -23,7 +23,7 @@ const projects = [
   {
     slug: "culturelink", index: "04", title: "CultureLink Kenya", subtitle: "Cultural Discovery Experience",
     tags: ["Discovery UX", "Onboarding", "Localisation"],
-    desc: "Personalised discovery across six cultural groups — onboarding, language modules, content navigation.",
+    desc: "Cultural discovery platform for Kenya — cultural categories, Shujaa AI assistant, language learning, and an interactive map of communities.",
     year: "2025–ongoing", bg: "#26215C", fg: "#AFA9EC", accent: "#7F77DD",
   },
 ];
