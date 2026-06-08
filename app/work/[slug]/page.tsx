@@ -7,12 +7,19 @@ const projects: Record<string, {
   problem: string; research: string[]; process: string[];
   solution: string; outcome: string[];
   role: string; duration: string; team: string;
+  screenshots?: { src: string; alt: string; caption?: string }[];
 }> = {
   haraka: {
     index: "01", title: "Haraka", subtitle: "Emergency Mobility Platform",
     year: "2026", bg: "#04342C", fg: "#5DCAA5", accent: "#1D9E75",
     tags: ["UX Research", "Interaction Design", "High-stakes UX", "End-to-end Design"],
     role: "Lead Designer", duration: "2026", team: "Cross-functional",
+    screenshots: [
+      { src: "/images/haraka/chat.png", alt: "Haraka chat interface — natural language symptom intake", caption: "Natural language intake" },
+      { src: "/images/haraka/analyzing.png", alt: "Haraka AI analysis in progress", caption: "AI assessment in progress" },
+      { src: "/images/haraka/results.png", alt: "Haraka results — urgency level and matched facilities", caption: "Urgency + matched facilities" },
+      { src: "/images/haraka/ride.png", alt: "Haraka ride confirmed — driver details and route", caption: "Ride confirmed" },
+    ],
     problem: "In emergencies — medical crises, accidents, urgent transport needs — people face a broken experience: wrong numbers, no visibility on arrival times, and interfaces built for calm users rather than panicked ones. Every second of friction has real consequences.",
     research: [
       "Conducted user interviews with people who had experienced medical emergencies or urgent transport needs in Nairobi.",
@@ -130,18 +137,51 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
         </div>
       </section>
 
-      {/* Screenshot placeholder */}
-      <div style={{
-        height: "400px", background: p.bg,
-        borderTop: `1px solid ${p.accent}30`,
-        display: "flex", alignItems: "center", justifyContent: "center",
-        flexDirection: "column", gap: "8px",
-      }}>
-        <div style={{ width: "48px", height: "48px", border: `1px dashed ${p.accent}`, borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <span style={{ color: p.accent, fontSize: "20px" }}>+</span>
+      {/* Screenshots */}
+      {p.screenshots ? (
+        <div style={{ background: p.bg, borderTop: `1px solid ${p.accent}15`, padding: "3rem 0 3rem" }}>
+          <div style={{
+            display: "flex", gap: "1.25rem",
+            padding: "0 2.5rem",
+            overflowX: "auto",
+            scrollbarWidth: "none",
+          }}>
+            {p.screenshots.map((shot, i) => (
+              <div key={i} style={{ flexShrink: 0, display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={shot.src}
+                  alt={shot.alt}
+                  style={{
+                    height: "420px",
+                    width: "auto",
+                    borderRadius: "10px",
+                    border: `1px solid ${p.accent}25`,
+                    display: "block",
+                  }}
+                />
+                {shot.caption && (
+                  <p style={{ fontFamily: "var(--mono)", fontSize: "11px", color: p.accent, textAlign: "center", letterSpacing: "0.5px" }}>
+                    {shot.caption}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
-        <p style={{ fontFamily: "var(--mono)", fontSize: "12px", color: p.accent }}>Screenshots / mockups go here</p>
-      </div>
+      ) : (
+        <div style={{
+          height: "400px", background: p.bg,
+          borderTop: `1px solid ${p.accent}30`,
+          display: "flex", alignItems: "center", justifyContent: "center",
+          flexDirection: "column", gap: "8px",
+        }}>
+          <div style={{ width: "48px", height: "48px", border: `1px dashed ${p.accent}`, borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <span style={{ color: p.accent, fontSize: "20px" }}>+</span>
+          </div>
+          <p style={{ fontFamily: "var(--mono)", fontSize: "12px", color: p.accent }}>Screenshots / mockups go here</p>
+        </div>
+      )}
 
       {/* Content */}
       <div style={{ maxWidth: "740px", margin: "0 auto", padding: "5rem 2.5rem" }}>
