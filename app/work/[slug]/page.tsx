@@ -96,6 +96,37 @@ const projects: Record<string, {
       "Blog section launched with travel and review content to build authority and drive return visits.",
     ],
   },
+  "tikiti-leo": {
+    index: "05", title: "Tikiti Leo", subtitle: "Event Ticketing & Installment Payments",
+    year: "2024", bg: "#0A0D1A", fg: "#F0F0F0", accent: "#E8192C",
+    tags: ["Fintech UX", "M-Pesa Integration", "Event Tech", "Full Stack"],
+    role: "Lead Designer & Developer", duration: "2024", team: "Independent",
+    screenshots: [
+      { src: "/images/TikitiLeo/image.png", alt: "Tikiti Leo homepage — Your Gateway to Amazing Events", caption: "Homepage" },
+      { src: "/images/TikitiLeo/image%20copy.png", alt: "Tikiti Leo login screen", caption: "User login" },
+      { src: "/images/TikitiLeo/image%20copy%202.png", alt: "Installment details for an event — payment schedule", caption: "Installment plan" },
+      { src: "/images/TikitiLeo/image%20copy%203.png", alt: "Payment options — M-Pesa integration", caption: "M-Pesa payment" },
+    ],
+    problem: "Getting tickets to events in Kenya often means paying the full amount upfront — a barrier that locks people out of popular but expensive events. Tikiti Leo was built to solve this: book your ticket today, pay in installments via M-Pesa on dates that work for you.",
+    research: [
+      "Identified that upfront ticket cost was the primary reason Kenyan event-goers missed out — particularly for multi-day or premium events.",
+      "Found that M-Pesa is the dominant and most trusted payment method in Kenya — any solution had to integrate with it natively, not treat it as an afterthought.",
+      "Discovered that BNPL (Buy Now, Pay Later) was growing across Kenyan e-commerce but had not yet been applied to event ticketing.",
+      "Mapped the installment tracking problem: users needed visibility into how much they'd paid, what remained, and when the next payment was due.",
+    ],
+    process: [
+      "Designed the installment detail view to surface the key facts clearly: event name, total amount, installment amount, and scheduled payment dates.",
+      "Built M-Pesa STK push integration — users enter their phone number and confirm payment directly on their phone without leaving the platform.",
+      "Created a user authentication system (Login/SignUp with user type selection) to enable personal installment schedules and payment history.",
+      "Designed the payment plan selection flow to let users choose how many installments they wanted before booking.",
+    ],
+    solution: "A full-stack event ticketing platform where users create an account, browse events, select a payment plan, and pay in scheduled installments via M-Pesa — making events accessible without requiring full upfront payment.",
+    outcome: [
+      "Full platform built and live — event browsing, ticket booking, and installment payment flow end-to-end.",
+      "M-Pesa STK push integration enabling seamless in-app payments.",
+      "Installment scheduling system tracking payment dates and amounts per user per event.",
+    ],
+  },
   culturelink: {
     index: "04", title: "CultureLink Kenya", subtitle: "Cultural Discovery Platform",
     year: "2025–Ongoing", bg: "#26215C", fg: "#AFA9EC", accent: "#7F77DD",
@@ -167,7 +198,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
             <span key={t} style={{ fontSize: "11px", padding: "4px 12px", border: `1px solid ${p.accent}40`, borderRadius: "20px", color: p.accent, fontFamily: "var(--mono)" }}>{t}</span>
           ))}
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "2rem", maxWidth: "480px" }}>
+        <div className="meta-grid">
           {[["Role", p.role], ["Duration", p.duration], ["Team", p.team]].map(([label, value]) => (
             <div key={label}>
               <p style={{ fontFamily: "var(--mono)", fontSize: "10px", color: p.accent, letterSpacing: "1px", textTransform: "uppercase", marginBottom: "4px" }}>{label}</p>

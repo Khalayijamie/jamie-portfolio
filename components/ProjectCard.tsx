@@ -12,11 +12,12 @@ export function ProjectCard({ p }: { p: Project }) {
   return (
     <Link href={`/work/${p.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
       <div
-        style={{ display: "grid", gridTemplateColumns: "280px 1fr", background: hovered ? "rgba(255,255,255,0.04)" : "var(--bg)", transition: "background 0.2s ease" }}
+        className="card-grid"
+        style={{ background: hovered ? "rgba(255,255,255,0.04)" : "var(--bg)", transition: "background 0.2s ease" }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
-        <div style={{ height: "220px", background: p.bg, display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "1.5rem" }}>
+        <div className="card-thumb" style={{ background: p.bg, display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "1.5rem" }}>
           <span style={{ fontFamily: "var(--mono)", fontSize: "11px", color: p.accent, letterSpacing: "2px" }}>{p.index}</span>
           <div>
             <div style={{ fontFamily: "var(--serif)", fontSize: "42px", fontWeight: 900, color: p.fg, letterSpacing: "-2px", lineHeight: 1 }}>{p.title.split(" ")[0]}</div>

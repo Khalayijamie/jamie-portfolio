@@ -26,6 +26,12 @@ const projects = [
     desc: "Cultural discovery platform for Kenya — cultural categories, Shujaa AI assistant, language learning, and an interactive map of communities.",
     year: "2025–ongoing", bg: "#26215C", fg: "#AFA9EC", accent: "#7F77DD",
   },
+  {
+    slug: "tikiti-leo", index: "05", title: "Tikiti Leo", subtitle: "Event Ticketing & Installment Payments",
+    tags: ["Fintech UX", "M-Pesa", "Event Tech"],
+    desc: "Book event tickets and pay in installments via M-Pesa — removing the upfront cost barrier for Kenyan event-goers.",
+    year: "2024", bg: "#0A0D1A", fg: "#F0F0F0", accent: "#E8192C",
+  },
 ];
 
 const skills = ["Figma", "User Interviews", "Prototyping", "Interaction Design", "React", "Next.js", "TypeScript", "User Flows", "Usability Testing", "Design Thinking", "Agile", "RAG Systems"];
@@ -39,10 +45,12 @@ export default function Home() {
         position: "sticky", top: 0, background: "var(--bg)", zIndex: 100,
       }}>
         <span style={{ fontFamily: "var(--serif)", fontWeight: 900, fontSize: "17px", letterSpacing: "-0.5px" }}>Jamie K.</span>
-        <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
-          {[["Work", "#work"], ["About", "#about"]].map(([l, h]) => (
-            <a key={l} href={h} style={{ fontSize: "13px", color: "var(--ink-muted)", textDecoration: "none", fontFamily: "var(--mono)", letterSpacing: "0.02em" }}>{l}</a>
-          ))}
+        <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+          <div className="nav-text-links">
+            {[["Work", "#work"], ["About", "#about"]].map(([l, h]) => (
+              <a key={l} href={h} style={{ fontSize: "13px", color: "var(--ink-muted)", textDecoration: "none", fontFamily: "var(--mono)", letterSpacing: "0.02em" }}>{l}</a>
+            ))}
+          </div>
           <a href="mailto:jamie.khalayi@gmail.com" style={{
             fontSize: "12px", padding: "7px 16px", border: "1px solid var(--ink)", borderRadius: "20px",
             color: "var(--ink)", textDecoration: "none", fontFamily: "var(--mono)",
@@ -93,14 +101,14 @@ export default function Home() {
       <section id="work" style={{ padding: "4rem 2.5rem" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "2.5rem", borderBottom: "1px solid var(--border)", paddingBottom: "0.75rem" }}>
           <span style={{ fontFamily: "var(--mono)", fontSize: "11px", letterSpacing: "2px", color: "var(--ink-muted)", textTransform: "uppercase" }}>Selected work</span>
-          <span style={{ fontFamily: "var(--mono)", fontSize: "11px", color: "var(--ink-faint)" }}>4 case studies</span>
+          <span style={{ fontFamily: "var(--mono)", fontSize: "11px", color: "var(--ink-faint)" }}>5 case studies</span>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: "1.5px", border: "1px solid var(--border)", borderRadius: "12px", overflow: "hidden" }}>
           {projects.map(p => <ProjectCard key={p.slug} p={p} />)}
         </div>
       </section>
 
-      <section id="about" style={{ padding: "4rem 2.5rem", borderTop: "1px solid var(--border)", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "start" }}>
+      <section id="about" className="about-grid" style={{ padding: "4rem 2.5rem", borderTop: "1px solid var(--border)" }}>
         <div>
           <p style={{ fontFamily: "var(--mono)", fontSize: "11px", letterSpacing: "2px", color: "var(--ink-muted)", textTransform: "uppercase", marginBottom: "1.5rem" }}>About</p>
           <h2 style={{ fontFamily: "var(--serif)", fontSize: "36px", fontWeight: 900, letterSpacing: "-1.5px", lineHeight: 1.1, marginBottom: "1.5rem" }}>
@@ -128,7 +136,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer style={{ borderTop: "1px solid var(--border)", padding: "3rem 2.5rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "#080807" }}>
+      <footer className="footer-inner" style={{ borderTop: "1px solid var(--border)", padding: "3rem 2.5rem", background: "#080807" }}>
         <div>
           <p style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 900, color: "var(--ink)", letterSpacing: "-1px" }}>Let's work together.</p>
           <p style={{ fontFamily: "var(--mono)", fontSize: "13px", color: "rgba(245,242,236,0.5)", marginTop: "4px" }}>jamie.khalayi@gmail.com</p>
