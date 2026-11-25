@@ -3,31 +3,37 @@ import { ProjectCard } from "@/components/ProjectCard";
 
 const projects = [
   {
-    slug: "haraka", index: "01", title: "Haraka", subtitle: "Emergency Mobility Platform",
+    slug: "avaia-events", index: "01", title: "Avaia Events", subtitle: "Event Equipment Rental Website",
+    tags: ["Web Design", "Next.js", "Small Business"],
+    desc: "Live website for a Kenyan event equipment rental company — services, packages, event galleries and WhatsApp-first booking. Designed and built solo.",
+    year: "2025", bg: "#2B0D16", fg: "#F0C9A8", accent: "#D9785B",
+  },
+  {
+    slug: "haraka", index: "02", title: "Haraka", subtitle: "Emergency Mobility Platform",
     tags: ["UX Research", "Interaction Design", "High-stakes UX"],
     desc: "Connecting users to emergency transport and healthcare. Designed for zero cognitive load under pressure.",
     year: "2026", bg: "#04342C", fg: "#5DCAA5", accent: "#1D9E75",
   },
   {
-    slug: "bagtrunkz", index: "02", title: "Bagtrunkz", subtitle: "Fashion E-commerce Platform",
+    slug: "bagtrunkz", index: "03", title: "Bagtrunkz", subtitle: "Fashion E-commerce Platform",
     tags: ["E-commerce UX", "Visual Design", "Conversion"],
     desc: "Full e-commerce platform for a Nairobi-born bag brand — product catalogue, brand story, and a content blog built to feel premium and local.",
     year: "2026", bg: "#1C1009", fg: "#E8C89A", accent: "#C4823E",
   },
   {
-    slug: "healthcare-ai", index: "03", title: "Healthcare AI Routing", subtitle: "AI-Powered Hospital Recommendation",
+    slug: "healthcare-ai", index: "04", title: "Healthcare AI Routing", subtitle: "AI-Powered Hospital Recommendation",
     tags: ["AI UX", "User Flows", "Accessibility"],
     desc: "Translated ML complexity into a clear, accessible interface for users with low digital literacy.",
     year: "2026", bg: "#042C53", fg: "#85B7EB", accent: "#378ADD",
   },
   {
-    slug: "culturelink", index: "04", title: "CultureLink Kenya", subtitle: "Cultural Discovery Experience",
+    slug: "culturelink", index: "05", title: "CultureLink Kenya", subtitle: "Cultural Discovery Experience",
     tags: ["Discovery UX", "Onboarding", "Localisation"],
     desc: "Cultural discovery platform for Kenya — cultural categories, Shujaa AI assistant, language learning, and an interactive map of communities.",
     year: "2025–ongoing", bg: "#26215C", fg: "#AFA9EC", accent: "#7F77DD",
   },
   {
-    slug: "tikiti-leo", index: "05", title: "Tikiti Leo", subtitle: "Event Ticketing & Installment Payments",
+    slug: "tikiti-leo", index: "06", title: "Tikiti Leo", subtitle: "Event Ticketing & Installment Payments",
     tags: ["Fintech UX", "M-Pesa", "Event Tech"],
     desc: "Book event tickets and pay in installments via M-Pesa — removing the upfront cost barrier for Kenyan event-goers.",
     year: "2024", bg: "#0A0D1A", fg: "#F0F0F0", accent: "#E8192C",
@@ -101,7 +107,7 @@ export default function Home() {
       <section id="work" style={{ padding: "4rem 2.5rem" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "2.5rem", borderBottom: "1px solid var(--border)", paddingBottom: "0.75rem" }}>
           <span style={{ fontFamily: "var(--mono)", fontSize: "11px", letterSpacing: "2px", color: "var(--ink-muted)", textTransform: "uppercase" }}>Selected work</span>
-          <span style={{ fontFamily: "var(--mono)", fontSize: "11px", color: "var(--ink-faint)" }}>5 case studies</span>
+          <span style={{ fontFamily: "var(--mono)", fontSize: "11px", color: "var(--ink-faint)" }}>6 case studies</span>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: "1.5px", border: "1px solid var(--border)", borderRadius: "12px", overflow: "hidden" }}>
           {projects.map(p => <ProjectCard key={p.slug} p={p} />)}

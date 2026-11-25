@@ -8,9 +8,37 @@ const projects: Record<string, {
   solution: string; outcome: string[];
   role: string; duration: string; team: string;
   screenshots?: { src: string; alt: string; caption?: string }[];
+  liveUrl?: string;
 }> = {
+  "avaia-events": {
+    index: "01", title: "Avaia Events", subtitle: "Event Equipment Rental Website",
+    year: "2025", bg: "#2B0D16", fg: "#F0C9A8", accent: "#D9785B",
+    tags: ["Web Design", "Next.js", "Small Business", "Conversion"],
+    role: "Sole Designer & Developer", duration: "2025", team: "Solo",
+    liveUrl: "https://avaiaevents.co.ke/",
+    problem: "Avaia Events rents out premium event equipment across Kenya: tents, seating, stages, lighting, sound, power, air conditioning and portable toilets. Like many Kenyan rental businesses, it relied on social media and word of mouth. Clients had no single place to see the full inventory, compare packages or view past work before reaching out. The business needed a credible home online that turned browsing into enquiries.",
+    research: [
+      "Mapped what event planners need to decide before contacting a rental company: what equipment is available, rough package tiers, proof of past events, and whether the company covers their location.",
+      "Found that Kenyan clients overwhelmingly prefer WhatsApp for quotes and bookings, so a traditional booking form or checkout would add friction rather than remove it.",
+      "Identified social proof — real event photos and recognisable partners — as the strongest trust signal for a young business.",
+      "Gathered the recurring client questions (lead time, delivery and setup, coverage, payment via M-Pesa, damage liability) to answer them upfront.",
+    ],
+    process: [
+      "Structured the site as a single scrolling page: hero, about, partners, services, packages, how it works, gallery, FAQ and contact, so a visitor can go from discovery to enquiry without leaving.",
+      "Organised the inventory into eight clear service categories, each listing the specific equipment offered.",
+      "Designed three tiered bundles (Starter, Grand, Executive) plus a custom option, so clients can anchor on a tier before asking for a quote.",
+      "Made WhatsApp the primary call to action throughout, with a floating chat button, and built event galleries grouped into albums from real Avaia events.",
+    ],
+    solution: "A fast, responsive Next.js website that presents Avaia Events as a premium, nationwide rental partner. Visitors can browse services and packages, see real events in the gallery, get answers in the FAQ, and start a booking on WhatsApp in one tap.",
+    outcome: [
+      "Designed, built and launched solo, live at avaiaevents.co.ke.",
+      "Eight service categories, three packages and a custom option presented in one clear flow.",
+      "Event galleries from real Avaia events, a partners strip, and an FAQ covering booking, delivery, payment and coverage.",
+      "WhatsApp-first enquiry flow matching how Kenyan clients actually book.",
+    ],
+  },
   haraka: {
-    index: "01", title: "Haraka", subtitle: "Emergency Mobility Platform",
+    index: "02", title: "Haraka", subtitle: "Emergency Mobility Platform",
     year: "2026", bg: "#04342C", fg: "#5DCAA5", accent: "#1D9E75",
     tags: ["UX Research", "Interaction Design", "High-stakes UX", "End-to-end Design"],
     role: "Lead Designer", duration: "2026", team: "Cross-functional",
@@ -41,7 +69,7 @@ const projects: Record<string, {
     ],
   },
   "healthcare-ai": {
-    index: "03", title: "Healthcare AI Routing", subtitle: "AI-Powered Hospital Recommendation",
+    index: "04", title: "Healthcare AI Routing", subtitle: "AI-Powered Hospital Recommendation",
     year: "2026", bg: "#042C53", fg: "#85B7EB", accent: "#378ADD",
     tags: ["AI UX", "User Flows", "Accessibility", "ML Systems"],
     role: "Designer & ML Engineer", duration: "2026", team: "Qare+",
@@ -66,7 +94,7 @@ const projects: Record<string, {
     ],
   },
   bagtrunkz: {
-    index: "02", title: "Bagtrunkz", subtitle: "Fashion E-commerce Platform",
+    index: "03", title: "Bagtrunkz", subtitle: "Fashion E-commerce Platform",
     year: "2026", bg: "#1C1009", fg: "#E8C89A", accent: "#C4823E",
     tags: ["E-commerce UX", "Brand Design", "Web Development", "Content Strategy"],
     role: "Lead Designer & Developer", duration: "2026", team: "Independent",
@@ -97,7 +125,7 @@ const projects: Record<string, {
     ],
   },
   "tikiti-leo": {
-    index: "05", title: "Tikiti Leo", subtitle: "Event Ticketing & Installment Payments",
+    index: "06", title: "Tikiti Leo", subtitle: "Event Ticketing & Installment Payments",
     year: "2024", bg: "#0A0D1A", fg: "#F0F0F0", accent: "#E8192C",
     tags: ["Fintech UX", "M-Pesa Integration", "Event Tech", "Full Stack"],
     role: "Lead Designer & Developer", duration: "2024", team: "Independent",
@@ -128,7 +156,7 @@ const projects: Record<string, {
     ],
   },
   culturelink: {
-    index: "04", title: "CultureLink Kenya", subtitle: "Cultural Discovery Platform",
+    index: "05", title: "CultureLink Kenya", subtitle: "Cultural Discovery Platform",
     year: "2025–Ongoing", bg: "#26215C", fg: "#AFA9EC", accent: "#7F77DD",
     tags: ["Discovery UX", "AI Integration", "Language Learning", "Interactive Design"],
     role: "Lead Designer & Developer", duration: "2025–Ongoing", team: "Independent",
@@ -206,6 +234,12 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
             </div>
           ))}
         </div>
+        {p.liveUrl && (
+          <a href={p.liveUrl} target="_blank" rel="noopener" style={{
+            display: "inline-block", marginTop: "2rem", background: p.accent, color: p.bg,
+            padding: "10px 20px", borderRadius: "4px", fontSize: "13px", fontFamily: "var(--mono)", textDecoration: "none",
+          }}>Visit live site ↗</a>
+        )}
       </section>
 
       {/* Screenshots */}
