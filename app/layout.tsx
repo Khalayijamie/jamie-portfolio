@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   title: "Jamie Khalayi Nangulu — Product Designer",
   description: "Product designer and software engineer. I research, design, and build human-centred products.",
   openGraph: {
-    title: "Jamie Khalayi Nangulu — Product Designer",
-    description: "Product designer and software engineer based in Nairobi.",
+    title: "Jamie Khalayi Nangulu — Product Builder & Designer",
+    description: "Product Builder & Designer, Full Stack Software engineer based in Nairobi.",
     type: "website",
   },
 };
