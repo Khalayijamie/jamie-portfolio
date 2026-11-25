@@ -85,7 +85,7 @@ export default function Home() {
             fontWeight: 900, lineHeight: 1.0, letterSpacing: "-3px", maxWidth: "700px", marginBottom: "1.5rem",
           }}>Design that<br /><em style={{ color: "var(--accent)" }}>ships.</em></h1>
           <p style={{ fontSize: "17px", color: "var(--ink-muted)", maxWidth: "480px", lineHeight: 1.7, marginBottom: "2.5rem" }}>
-            Product designer and software engineer. I research, prototype, and build human-centred products — from emergency platforms to AI routing systems.
+            Product Designer and Full Stack Software engineer. I research, prototype, and build human-centred products 
           </p>
           <div style={{ display: "flex", gap: "1rem" }}>
             <a href="#work" style={{ background: "var(--ink)", color: "var(--bg)", padding: "12px 24px", borderRadius: "4px", fontSize: "14px", fontFamily: "var(--mono)", textDecoration: "none" }}>View work ↓</a>
