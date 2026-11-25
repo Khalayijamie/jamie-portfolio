@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jamie-portfolio-delta.vercel.app"),
   title: "Jamie Khalayi Nangulu — Product Designer",
   description: "Product designer and software engineer. I research, design, and build human-centred products.",
   openGraph: {
