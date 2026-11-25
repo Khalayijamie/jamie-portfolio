@@ -16,6 +16,11 @@ const projects: Record<string, {
     tags: ["Web Design", "Next.js", "Small Business", "Conversion"],
     role: "Sole Designer & Developer", duration: "2025", team: "Solo",
     liveUrl: "https://avaiaevents.co.ke/",
+    screenshots: [
+      { src: "/images/Avaia/image%20copy%202.png", alt: "Avaia Events homepage hero — Every Event, Perfectly Equipped", caption: "Homepage hero" },
+      { src: "/images/Avaia/image.png", alt: "Who We Are — We don't just set up events, we set the scene", caption: "Brand story" },
+      { src: "/images/Avaia/image%20copy.png", alt: "Our Work gallery — event albums from Kisumu", caption: "Event gallery" },
+    ],
     problem: "Avaia Events rents out premium event equipment across Kenya: tents, seating, stages, lighting, sound, power, air conditioning and portable toilets. Like many Kenyan rental businesses, it relied on social media and word of mouth. Clients had no single place to see the full inventory, compare packages or view past work before reaching out. The business needed a credible home online that turned browsing into enquiries.",
     research: [
       "Mapped what event planners need to decide before contacting a rental company: what equipment is available, rough package tiers, proof of past events, and whether the company covers their location.",
