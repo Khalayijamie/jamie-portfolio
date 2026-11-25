@@ -12,7 +12,7 @@ const projects: Record<string, {
 }> = {
   "avaia-events": {
     index: "01", title: "Avaia Events", subtitle: "Event Equipment Rental Website",
-    year: "2025", bg: "#2B0D16", fg: "#F0C9A8", accent: "#D9785B",
+    year: "2025", bg: "#0B0B0A", fg: "#F3ECDD", accent: "#C9A84C",
     tags: ["Web Design", "Next.js", "Small Business", "Conversion"],
     role: "Sole Designer & Developer", duration: "2025", team: "Solo",
     liveUrl: "https://avaiaevents.co.ke/",

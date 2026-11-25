@@ -6,7 +6,7 @@ const projects = [
     slug: "avaia-events", index: "01", title: "Avaia Events", subtitle: "Event Equipment Rental Website",
     tags: ["Web Design", "Next.js", "Small Business"],
     desc: "Live website for a Kenyan event equipment rental company — services, packages, event galleries and WhatsApp-first booking. Designed and built solo.",
-    year: "2025", bg: "#2B0D16", fg: "#F0C9A8", accent: "#D9785B",
+    year: "2025", bg: "#0B0B0A", fg: "#F3ECDD", accent: "#C9A84C",
   },
   {
     slug: "haraka", index: "02", title: "Haraka", subtitle: "Emergency Mobility Platform",
